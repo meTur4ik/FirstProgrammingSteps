@@ -6,11 +6,12 @@
 
 int main()
 {
+    setlocale(LC_ALL, "");
     int phiVariant = 0;
     double z = 0;
-    std::cout << "enter phi variant (1, 2 or 3): ";
+    std::cout << "введите вариант фи (1, 2 или 3): ";
     std::cin >> phiVariant;
-    std::cout << "enter x: ";
+    std::cout << "введите x: ";
     std::cin >> z;
 
     double x = 0;
@@ -32,12 +33,12 @@ int main()
             phi = x / 3.;
             break;
         default:
-            std::cout << "go fuck yourself";
+            std::cout << "поддерживаются только значения 1, 2, или 3";
             return -1;
     }
 
     double a = 2;
     double b = 3;
     double y = (b * phi / cos(x)) + a * log(abs(tan(x / 2)));
-    std::cout << "y is " << y << std::endl;
+    std::cout << "y = " << y << std::endl;
 }
